@@ -1,18 +1,17 @@
-# 經濟學原理與實習 · AI TA 使用入口
+# 經濟學原理與實習 · AI TA 網站
 
-公開網站：<https://danieltsai2026.github.io/econ-principles-ta-pages/>
+網站：<https://danieltsai2026.github.io/econ-principles-ta-pages/>
 
-這個 repository 僅提供學生使用入口。完整 TA 教材保留在私人 repository [econ-principles-ta](https://github.com/DanielTsai2026/econ-principles-ta)，需取得存取權後下載。網站本身不提供 AI 聊天。
+目前為服務準備頁，尚未接上登入與 AI 問答。依教師要求，已撤下完整 TA 下載指引與所有教材連結。
+
+## 教材邊界
+
+- 原始講義、簡報、考古題與完整 TA 資料僅保留在教師私人環境。
+- 不邀請學生存取完整教材 repository，不將原文放入公開網站、JavaScript、AI Artifact 或瀏覽器下載資料。
+- 未來問答只能使用核准對學生提供的教學內容。提示詞不是保密邊界；將內容交給學生端或學生自己的 AI 工具，即視為可能被學生取得。
 
 ## 部署
 
-依 EduSpec `PUBLISH-GITHUB-IO.md` 的 GitHub Pages 分支發布方式：Settings → Pages → Deploy from a branch → `main` / `/ (root)`。
+沿用 GitHub Pages：`main` / `/ (root)`。修改 `index.html` 或 `styles.css`，提交並推送後重新發布。
 
-- `index.html`：學生入口、提問指令與教材導覽。
-- `styles.css`：桌面與手機版樣式。
-- `app.js`：複製提問指令，無外部服務或持久儲存。
-- `.nojekyll`：直接提供靜態檔案。
-
-修改後提交並推送 `main`，GitHub Pages 會重新發布。不要將完整課程教材、原始素材、私人報告或登入憑證複製到這個公開 repository。
-
-目前 TA 為待驗收草稿；網站不表示教師審閱或教學對話驗收已完成。
+後續需依支援的 AI 平台完成帳號登入、用量歸屬及教材存取設計，再開放問答；不以單純身份登入代表可使用訂閱推論額度。
