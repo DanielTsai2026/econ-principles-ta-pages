@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="經濟學原理與實習 AI 助教的學生使用入口：取得課程資料、開始提問、查找教材。授課教師：林明仁。">
+  <meta name="theme-color" content="#153c3c">
+  <title>經濟學原理與實習 · AI TA</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳至主要內容</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="經濟學原理與實習 AI TA 首頁"><span class="brand-mark" aria-hidden="true">TA</span><span>經濟學原理與實習</span></a>
+    <nav aria-label="主要導覽"><a href="#start">開始使用</a><a href="#prompts">提問指令</a><a href="#materials">教材導覽</a></nav>
+  </header>
+
+  <main id="main">
+    <section class="intro" aria-labelledby="title">
+      <div>
+        <h1 id="title">課後提問，<br>從這裡開始。</h1>
+        <p class="lead">用課程教材釐清概念、理解題意，<br class="desktop-break">找到卡住時該補的先備知識。</p>
+        <p class="instructor">經濟學原理與實習 AI TA <span aria-hidden="true">／</span> 授課教師：林明仁</p>
+      </div>
+      <aside class="access" aria-labelledby="access-title">
+        <h2 id="access-title">取得你的課程助教</h2>
+        <p>先接受課程 repository 邀請，再登入 GitHub 下載助教資料夾。</p>
+        <a class="button primary" href="https://github.com/DanielTsai2026/econ-principles-ta">前往課程資料庫 <span aria-hidden="true">↗</span></a>
+        <p class="access-note">需取得存取權。若看到 404，請確認已接受邀請，並登入受邀帳號。</p>
+      </aside>
+    </section>
+
+    <div class="notice"><span class="notice-title">待驗收草稿</span><p>尚未完成教師審閱與學生對話測試。這裡是公開使用入口；完整教材維持私人，下載後透過 Claude Code 或 Codex 提問。本頁不提供聊天。</p></div>
+
+    <section id="start" class="section" aria-labelledby="start-title">
+      <div class="section-heading"><h2 id="start-title">三步開始使用</h2><p>第一次設定好，以後直接打開課程資料夾。</p></div>
+      <ol class="steps">
+        <li><span class="step-number" aria-hidden="true">01</span><div><h3>下載課程資料夾</h3><p>接受 GitHub 邀請後，開啟課程資料庫，選擇 <strong>Code → Download ZIP</strong>，再解壓縮。</p></div></li>
+        <li><span class="step-number" aria-hidden="true">02</span><div><h3>準備 AI 工具</h3><p>安裝 <a href="https://code.claude.com/docs">Claude Code</a> 或 <a href="https://developers.openai.com/codex">Codex</a>，並登入自己的帳號。工具費用依你使用的方案而定。</p></div></li>
+        <li><span class="step-number" aria-hidden="true">03</span><div><h3>打開資料夾，開始提問</h3><p>在終端機輸入 <code>cd</code> 加空格，拖入解壓後的資料夾並按 Enter。接著輸入 <code>claude</code> 或 <code>codex</code>，使用下方指令。</p></div></li>
+      </ol>
+    </section>
+
+    <section id="prompts" class="section" aria-labelledby="prompts-title">
+      <div class="section-heading"><h2 id="prompts-title">選一個工具，問第一題</h2><p>先說你知道什麼、試過什麼、卡在哪。</p></div>
+      <div class="prompt-grid">
+        <article class="prompt"><div class="prompt-heading"><h3>Claude Code</h3><button type="button" class="copy" data-copy="claude-prompt" aria-label="複製 Claude Code 提問指令" hidden>複製指令</button></div><pre><code id="claude-prompt">/ta 機會成本是什麼？</code></pre></article>
+        <article class="prompt"><div class="prompt-heading"><h3>Codex</h3><button type="button" class="copy" data-copy="codex-prompt" aria-label="複製 Codex 提問指令" hidden>複製指令</button></div><pre><code id="codex-prompt">Use $econ-principles-ta-agent to answer: 機會成本是什麼？</code></pre></article>
+      </div>
+      <p class="help-note">助教會協助理解題意，提供第一步提示與引導問題；作業的完整答案仍需由你自己完成。</p>
+      <details><summary>助教指令沒有載入？</summary><p>確認打開的是包含 <code>AGENT.md</code> 的課程資料夾。也可以直接貼上這段文字：</p><div class="fallback"><code id="fallback-prompt">請完整讀取本資料夾的 AGENT.md，依其中的規則與教材來源回答：我的問題是……</code><button type="button" class="copy" data-copy="fallback-prompt" aria-label="複製備用提問指令" hidden>複製指令</button></div></details>
+      <p id="copy-status" class="sr-only" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="materials" class="section" aria-labelledby="materials-title">
+      <div class="section-heading"><h2 id="materials-title">回到教材，核對答案</h2><p>以下連結皆需先取得課程 GitHub 存取權。</p></div>
+      <ul class="material-list">
+        <li><a href="https://github.com/DanielTsai2026/econ-principles-ta/blob/main/syllabus.md"><span><strong>課務與評分</strong><small>歷史課務快照；日期與規則以最新公告為準。</small></span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/DanielTsai2026/econ-principles-ta/tree/main/lecture-notes"><span><strong>講義與單元</strong><small>依主題找到講義，核對定義、例子與推導。</small></span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/DanielTsai2026/econ-principles-ta/tree/main/homework"><span><strong>作業說明</strong><small>提問時附上學期、檔案代碼與題號。</small></span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/DanielTsai2026/econ-principles-ta/blob/main/prerequisites.md"><span><strong>課前先備與自我檢測</strong><small>找出需要補強的概念，也能請助教一次問一題。</small></span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/DanielTsai2026/econ-principles-ta/blob/main/knowledge-graph.md"><span><strong>課程概念地圖</strong><small>看懂概念之間的先備關係，找出回頭複習的入口。</small></span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/DanielTsai2026/econ-principles-ta/blob/main/exams.md"><span><strong>歷屆考試<span class="inline-note">部分待補齊</span></strong><small>部分 Word 考卷公式缺漏，取得完整題目前暫停使用相關題目。</small></span><span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title"><h2 id="closing-title">先嘗試，再提問。</h2><p>用助教減少無效卡關，保留自己思考的過程。<br>提問時不要輸入個資、成績、密碼或 API key。</p></section>
+  </main>
+  <footer><p>經濟學原理與實習 · AI TA<br><span>由 AI 協助整理，尚待授課教師審閱。</span></p><div><a href="https://github.com/DanielTsai2026/econ-principles-ta/blob/main/README.md">完整使用說明</a><a href="https://github.com/DanielTsai2026/econ-principles-ta/blob/main/RELEASE-NOTES.md">發布狀態與已知缺漏</a></div></footer>
+</body>
+</html>
